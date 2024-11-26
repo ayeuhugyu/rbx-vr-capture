@@ -4,25 +4,25 @@
     "$className": "DataModel",
     "Lighting": {
       "$properties": {
-        "GlobalShadows": true,
+        "Technology": "Voxel",
         "Ambient": [
           0.0,
           0.0,
           0.0
         ],
+        "GlobalShadows": true,
         "Outlines": false,
-        "Brightness": 2.0,
-        "Technology": "Voxel"
-      }
-    },
-    "ReplicatedStorage": {
-      "Shared": {
-        "$path": "src/ReplicatedStorage"
+        "Brightness": 2.0
       }
     },
     "PluginDebugService": {
       "Server": {
         "$path": "src/PluginDebugService"
+      }
+    },
+    "ReplicatedStorage": {
+      "Shared": {
+        "$path": "src/ReplicatedStorage"
       }
     },
     "ServerScriptService": {
@@ -46,13 +46,6 @@
       "Baseplate": {
         "$className": "Part",
         "$properties": {
-          "Anchored": true,
-          "Position": [
-            0.0,
-            -10.0,
-            0.0
-          ],
-          "Locked": true,
           "Size": [
             512.0,
             20.0,
@@ -62,7 +55,14 @@
             0.38823,
             0.37254,
             0.38823
-          ]
+          ],
+          "Position": [
+            0.0,
+            -10.0,
+            0.0
+          ],
+          "Locked": true,
+          "Anchored": true
         }
       },
       "$properties": {
