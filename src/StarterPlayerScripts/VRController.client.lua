@@ -7,11 +7,11 @@ if isNotR6 then
     return
 end
 
-local leftHand
-local rightHand
-local head
-local leftControllerPart
-local rightControllerPart
+local leftHand: Part
+local rightHand: Part
+local head: Part
+local leftControllerPart: Part
+local rightControllerPart: Part
 
 function onCharacterAdded(char)
     character = char
@@ -56,10 +56,18 @@ VRService.UserCFrameChanged:Connect(function(CFrameType, cf)
         local controllerPart = controller[1]
         local characterPart = controller[2]
         if controllerPart then
-            controllerPart.CFrame = cf
+            if CFrameType ~= Enum.UserCFrame.Head then
+                controllerPart.CFrame = cf * UserControllerIndex[Enum.UserCFrame.Head][1].CFrame:Inverse()
+            else
+                controllerPart.CFrame = cf
+            end
         end
         if characterPart then
-            characterPart.CFrame = cf
+            if CFrameType ~= Enum.UserCFrame.Head then
+                characterPart.CFrame = cf * UserControllerIndex[Enum.UserCFrame.Head][1].CFrame:Inverse()
+            else
+                characterPart.CFrame = cf
+            end
         end
     end
 end)

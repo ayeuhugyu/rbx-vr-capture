@@ -131,7 +131,14 @@ appearanceSettingsListLayout.Parent = appearanceSettingsFrame
 local otherSettingsListLayout = Instance.new("UIListLayout")
 otherSettingsListLayout.Parent = otherSettingsFrame
 
--- FUNCTIONS
+-- REGULAR FUNCTIONS
+
+while isRecording do
+    local frame = {}
+    task.wait(1 / settings.recorder.sampleRate)
+end
+
+-- BUTTON FUNCTIONS
 
 function toggleConfigMenu()
     configIsOpen = not configIsOpen
