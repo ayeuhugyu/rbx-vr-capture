@@ -20,6 +20,11 @@
         "$path": "src/ReplicatedStorage"
       }
     },
+    "PluginDebugService": {
+      "Server": {
+        "$path": "src/PluginDebugService"
+      }
+    },
     "ServerScriptService": {
       "Server": {
         "$path": "src/ServerScriptService"
