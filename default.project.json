@@ -25,6 +25,11 @@
         "$path": "src/ServerScriptService"
       }
     },
+    "PluginDebugService": {
+      "Server": {
+        "$path": "src/PluginDebugService"
+      }
+    },
     "SoundService": {
       "$properties": {
         "RespectFilteringEnabled": true
